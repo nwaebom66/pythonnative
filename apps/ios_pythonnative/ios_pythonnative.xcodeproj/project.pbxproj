@@ -16,6 +16,10 @@
 		14BBDC752A382DE70030EB3E /* ios_pythonnativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBDC742A382DE70030EB3E /* ios_pythonnativeTests.swift */; };
 		14BBDC7F2A382DE70030EB3E /* ios_pythonnativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBDC7E2A382DE70030EB3E /* ios_pythonnativeUITests.swift */; };
 		14BBDC812A382DE70030EB3E /* ios_pythonnativeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBDC802A382DE70030EB3E /* ios_pythonnativeUITestsLaunchTests.swift */; };
+		14BBE3002A3837F70030EB3E /* Python.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BBE2FF2A3837F70030EB3E /* Python.xcframework */; };
+		14BBE3012A3837F70030EB3E /* Python.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14BBE2FF2A3837F70030EB3E /* Python.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14BBE64A2A38397C0030EB3E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14BBE6492A38397C0030EB3E /* PythonKit */; };
+		14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9902A383F1C0030EB3E /* python-stdlib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		14BBE3022A3837F70030EB3E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14BBE3012A3837F70030EB3E /* Python.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		14BBDC5A2A382DE40030EB3E /* ios_pythonnative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_pythonnative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BBDC5D2A382DE50030EB3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +67,9 @@
 		14BBDC7A2A382DE70030EB3E /* ios_pythonnativeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_pythonnativeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BBDC7E2A382DE70030EB3E /* ios_pythonnativeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pythonnativeUITests.swift; sourceTree = "<group>"; };
 		14BBDC802A382DE70030EB3E /* ios_pythonnativeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_pythonnativeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14BBE2F82A3837930030EB3E /* Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Support; sourceTree = "<group>"; };
+		14BBE2FF2A3837F70030EB3E /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Python.xcframework; path = Support/Python.xcframework; sourceTree = "<group>"; };
+		14BBE9902A383F1C0030EB3E /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "python-stdlib"; path = "Support/python-stdlib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BBE3002A3837F70030EB3E /* Python.xcframework in Frameworks */,
+				14BBE64A2A38397C0030EB3E /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +102,13 @@
 		14BBDC512A382DE40030EB3E = {
 			isa = PBXGroup;
 			children = (
+				14BBE9902A383F1C0030EB3E /* python-stdlib */,
+				14BBE2F82A3837930030EB3E /* Support */,
 				14BBDC5C2A382DE40030EB3E /* ios_pythonnative */,
 				14BBDC732A382DE70030EB3E /* ios_pythonnativeTests */,
 				14BBDC7D2A382DE70030EB3E /* ios_pythonnativeUITests */,
 				14BBDC5B2A382DE40030EB3E /* Products */,
+				14BBE2FA2A3837E60030EB3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +153,14 @@
 			path = ios_pythonnativeUITests;
 			sourceTree = "<group>";
 		};
+		14BBE2FA2A3837E60030EB3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14BBE2FF2A3837F70030EB3E /* Python.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +171,16 @@
 				14BBDC562A382DE40030EB3E /* Sources */,
 				14BBDC572A382DE40030EB3E /* Frameworks */,
 				14BBDC582A382DE40030EB3E /* Resources */,
+				14BBE3022A3837F70030EB3E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ios_pythonnative;
+			packageProductDependencies = (
+				14BBE6492A38397C0030EB3E /* PythonKit */,
+			);
 			productName = ios_pythonnative;
 			productReference = 14BBDC5A2A382DE40030EB3E /* ios_pythonnative.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +253,9 @@
 				Base,
 			);
 			mainGroup = 14BBDC512A382DE40030EB3E;
+			packageReferences = (
+				14BBE6482A38397C0030EB3E /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 14BBDC5B2A382DE40030EB3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +275,7 @@
 				14BBDC6A2A382DE70030EB3E /* LaunchScreen.storyboard in Resources */,
 				14BBDC672A382DE70030EB3E /* Assets.xcassets in Resources */,
 				14BBDC652A382DE50030EB3E /* Main.storyboard in Resources */,
+				14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14BBE6482A38397C0030EB3E /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14BBE6492A38397C0030EB3E /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14BBE6482A38397C0030EB3E /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14BBDC522A382DE40030EB3E /* Project object */;
 }
