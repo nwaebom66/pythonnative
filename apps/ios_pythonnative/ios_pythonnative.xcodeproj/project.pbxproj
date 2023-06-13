@@ -21,6 +21,8 @@
 		14BBE64A2A38397C0030EB3E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14BBE6492A38397C0030EB3E /* PythonKit */; };
 		14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9902A383F1C0030EB3E /* python-stdlib */; };
 		14BBE9932A38D3ED0030EB3E /* create_widgets.py in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9922A38D3ED0030EB3E /* create_widgets.py */; };
+		14BBE9952A38E3B20030EB3E /* rubicon in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9942A38E3B20030EB3E /* rubicon */; };
+		14BBE9972A38E5E10030EB3E /* rubicon_objc.egg-info in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9962A38E5E10030EB3E /* rubicon_objc.egg-info */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		14BBE2FF2A3837F70030EB3E /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Python.xcframework; path = Support/Python.xcframework; sourceTree = "<group>"; };
 		14BBE9902A383F1C0030EB3E /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "python-stdlib"; path = "Support/python-stdlib"; sourceTree = "<group>"; };
 		14BBE9922A38D3ED0030EB3E /* create_widgets.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_widgets.py; sourceTree = "<group>"; };
+		14BBE9942A38E3B20030EB3E /* rubicon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rubicon; sourceTree = "<group>"; };
+		14BBE9962A38E5E10030EB3E /* rubicon_objc.egg-info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "rubicon_objc.egg-info"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		14BBDC512A382DE40030EB3E = {
 			isa = PBXGroup;
 			children = (
+				14BBE9962A38E5E10030EB3E /* rubicon_objc.egg-info */,
+				14BBE9942A38E3B20030EB3E /* rubicon */,
 				14BBE9922A38D3ED0030EB3E /* create_widgets.py */,
 				14BBE9902A383F1C0030EB3E /* python-stdlib */,
 				14BBE2F82A3837930030EB3E /* Support */,
@@ -280,6 +286,8 @@
 				14BBDC652A382DE50030EB3E /* Main.storyboard in Resources */,
 				14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */,
 				14BBE9932A38D3ED0030EB3E /* create_widgets.py in Resources */,
+				14BBE9952A38E3B20030EB3E /* rubicon in Resources */,
+				14BBE9972A38E5E10030EB3E /* rubicon_objc.egg-info in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

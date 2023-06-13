@@ -24,7 +24,15 @@ class ViewController: UIViewController {
         }
                 
         setenv("PYTHONHOME", stdLibPath, 1)
-        setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath)", 1)
+        
+        // Assuming you've added `rubicon_objc.egg-info` to your app's resources.
+        guard let eggInfoPath = Bundle.main.path(forResource: "rubicon_objc.egg-info", ofType: nil) else {
+            print("Could not find path to rubicon_objc.egg-info")
+            return
+        }
+
+        setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath):\(eggInfoPath)", 1)
+//        setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath)", 1)
                 
         Py_Initialize()
                 
@@ -35,9 +43,16 @@ class ViewController: UIViewController {
                 
         _ = Python.import("math")
         
+        // Rubicon
         sys.path.append(Bundle.main.bundlePath)
-        let createWidgetsModule = Python.import("create_widgets")
-        let mainView = createWidgetsModule.create_widgets()
+        let rubicon = Python.import("rubicon")
+//        print("Rubicon Version: \(rubicon.__version__)")
+        let rubicon_objc = Python.import("rubicon.objc")
+        let objcClass = rubicon_objc.ObjCClass
+        print(objcClass)
+        
+//        let createWidgetsModule = Python.import("create_widgets")
+//        let mainView = createWidgetsModule.create_widgets()
     }
 
 
