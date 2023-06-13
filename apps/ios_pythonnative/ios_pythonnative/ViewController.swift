@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         print("Python Path: \(sys.path)")
                 
         _ = Python.import("math")
+        
+        sys.path.append(Bundle.main.bundlePath)
+        let createWidgetsModule = Python.import("create_widgets")
+        let mainView = createWidgetsModule.create_widgets()
     }
 
 

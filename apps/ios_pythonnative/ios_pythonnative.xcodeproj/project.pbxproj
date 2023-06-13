@@ -20,6 +20,7 @@
 		14BBE3012A3837F70030EB3E /* Python.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14BBE2FF2A3837F70030EB3E /* Python.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14BBE64A2A38397C0030EB3E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 14BBE6492A38397C0030EB3E /* PythonKit */; };
 		14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9902A383F1C0030EB3E /* python-stdlib */; };
+		14BBE9932A38D3ED0030EB3E /* create_widgets.py in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9922A38D3ED0030EB3E /* create_widgets.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		14BBE2F82A3837930030EB3E /* Support */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Support; sourceTree = "<group>"; };
 		14BBE2FF2A3837F70030EB3E /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Python.xcframework; path = Support/Python.xcframework; sourceTree = "<group>"; };
 		14BBE9902A383F1C0030EB3E /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "python-stdlib"; path = "Support/python-stdlib"; sourceTree = "<group>"; };
+		14BBE9922A38D3ED0030EB3E /* create_widgets.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_widgets.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		14BBDC512A382DE40030EB3E = {
 			isa = PBXGroup;
 			children = (
+				14BBE9922A38D3ED0030EB3E /* create_widgets.py */,
 				14BBE9902A383F1C0030EB3E /* python-stdlib */,
 				14BBE2F82A3837930030EB3E /* Support */,
 				14BBDC5C2A382DE40030EB3E /* ios_pythonnative */,
@@ -276,6 +279,7 @@
 				14BBDC672A382DE70030EB3E /* Assets.xcassets in Resources */,
 				14BBDC652A382DE50030EB3E /* Main.storyboard in Resources */,
 				14BBE9912A383F1C0030EB3E /* python-stdlib in Resources */,
+				14BBE9932A38D3ED0030EB3E /* create_widgets.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
