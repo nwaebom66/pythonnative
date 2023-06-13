@@ -1,26 +1,24 @@
-from rubicon.objc import ObjCClass
+from rubicon.objc import ObjCClass, ObjCInstance
 
 # UIKit classes
 UIView = ObjCClass('UIView')
 UIButton = ObjCClass('UIButton')
 UILabel = ObjCClass('UILabel')
+UIApplication = ObjCClass('UIApplication')
 
 
-def create_widgets():
-    # Create UIView
-    main_view = UIView.new().autorelease()
-    main_view.frame = ((0.0, 0.0), (320.0, 480.0)) # X, Y, Width, Height
-
+def create_widgets(view_tag):
+    app = UIApplication.sharedApplication
+    window = app.keyWindow  # Get key window
+    root_view = window.viewWithTag_(view_tag)
+    
     # Create UILabel
     label = UILabel.new().autorelease()
     label.frame = ((80.0, 80.0), (160.0, 30.0)) # X, Y, Width, Height
     label.text = "Label created in Python"
-    main_view.addSubview_(label)
+    label.sizeToFit()
+    root_view.addSubview_(label)
 
-    # Create UIButton
-    button = UIButton.buttonWithType_(UIButton.systemButton())  # systemButton is '0'
-    button.frame = ((80.0, 120.0), (160.0, 30.0))  # X, Y, Width, Height
-    button.setTitle_forState_("Button created in Python", 0)  # 0 is UIControlStateNormal
-    main_view.addSubview_(button)
+    # Continue adding other widgets to root_view as needed...
 
-    return main_view
+    return

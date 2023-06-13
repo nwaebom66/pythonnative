@@ -52,9 +52,29 @@ class ViewController: UIViewController {
         print(objcClass)
         
 //        let createWidgetsModule = Python.import("create_widgets")
-//        let mainView = createWidgetsModule.create_widgets()
+//        self.view.tag = 100
+//        createWidgetsModule.create_widgets(self.view.tag)
+        
+//        let mainViewPythonObject = createWidgetsModule.create_widgets()
+//
+//        print(Python.type(mainViewPythonObject))
+//        print(mainViewPythonObject.frame)
+
+        // Convert Python object to UIView
+//        if let mainView = mainViewPythonObject as? UIView {
+//            self.view.addSubview(mainView)
+//        } else {
+//            print("Failed to create mainView")
+//        }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let createWidgetsModule = Python.import("create_widgets")
+        self.view.tag = 100
+        createWidgetsModule.create_widgets(self.view.tag)
+    }
 
 }
 
