@@ -1,4 +1,4 @@
-from rubicon.objc import ObjCClass, ObjCInstance
+from rubicon.objc import ObjCClass, objc_method, SEL
 
 # UIKit classes
 UIView = ObjCClass('UIView')
@@ -16,6 +16,25 @@ NSData = ObjCClass('NSData')
 UIImage = ObjCClass('UIImage')
 UIImageView = ObjCClass('UIImageView')
 UIActivityIndicatorView = ObjCClass('UIActivityIndicatorView')
+
+NSObject = ObjCClass('NSObject')
+
+
+# Create a new class that will handle the button press
+class ButtonHandler(NSObject):
+    @objc_method
+    def buttonTapped_(self, sender):
+        sender.setTitle_forState_("Button tapped!", 0)  # 0 represents normal state
+        sender.backgroundColor = UIColor.redColor
+
+
+class SwitchHandler(NSObject):
+    @objc_method
+    def switchFlipped_(self, sender):
+        if sender.isOn:
+            sender.superview.backgroundColor = UIColor.greenColor
+        else:
+            sender.superview.backgroundColor = UIColor.whiteColor
 
 
 def create_widgets(view_tag):
@@ -46,13 +65,17 @@ def create_widgets(view_tag):
     stack_view.addArrangedSubview_(label)
 
     # Create UIButton
-    button = UIButton.buttonWithType_(
-        0).autorelease()  # 0 represents UIButtonTypeCustom
+    # handler = ButtonHandler.new().autorelease()
+    handler = ButtonHandler.new()
+    button = UIButton.new().autorelease()
     button.setTitle_forState_("Button created in Python",
                               0)  # 0 represents normal state
     button.backgroundColor = UIColor.greenColor  # Set the background color to green
     button.setTitleColor_forState_(UIColor.blackColor,
                                    0)  # Set the title color to black for normal state
+    button.addTarget_action_forControlEvents_(handler, SEL('buttonTapped:'), 1 << 6)  # 1 << 6 is UIControlEventTouchUpInside
+    button.enabled = True
+    button.userInteractionEnabled = True
     stack_view.addArrangedSubview_(button)
 
     # Create UITextField
@@ -61,7 +84,11 @@ def create_widgets(view_tag):
     stack_view.addArrangedSubview_(text_field)
 
     # Create UISwitch
+    switch_handler = SwitchHandler.new()
     switch = UISwitch.new().autorelease()
+    switch.addTarget_action_forControlEvents_(switch_handler,
+                                              SEL('switchFlipped:'),
+                                              1 << 12)  # 1 << 12 is UIControlEventValueChanged
     stack_view.addArrangedSubview_(switch)
 
     # Create UISlider
