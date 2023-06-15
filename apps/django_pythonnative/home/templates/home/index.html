@@ -1,5 +1,8 @@
 {% extends "base_generic.html" %}
 {% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+{% endblock %}
 {% block content %}
-  <img src="{% static 'app_icon.png' %}" alt="PythonNative Icon">
+  <img src="{% static 'app_icon.png' %}" alt="PythonNative Icon" class="responsive-image">
 {% endblock %}
