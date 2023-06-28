@@ -1,8 +1,31 @@
 {% extends "base_generic.html" %}
 {% load static %}
 {% block css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
   <link rel="stylesheet" href="{% static 'docs/style.css' %}">
 {% endblock %}
 {% block content %}
-  <p>Introduction docs!</p>
+  <h1>PythonNative at a glance</h1>
+  <p>PythonNative is a cross-platform Python tool kit for Android and iOS. It
+    allows you to create native UI elements such as buttons and labels in a
+    Pythonic way, regardless of whether you're running on iOS or Android.</p>
+  <h2>Write your views</h2>
+  <p>Everything in PythonNative is a view.</p>
+  <pre><code class="language-python">import pythonnative as pn
+
+
+def create_pn_layout(context):
+    layout = pn.LinearLayout(context)
+
+    label = pn.Label(context, "This is a PythonNative label")
+    layout.add_view(label)
+
+    button = pn.Button(context, "Click me")
+    layout.add_view(button)
+
+    return layout.native_instance</code></pre>
+{% endblock %}
+{% block js %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 {% endblock %}
