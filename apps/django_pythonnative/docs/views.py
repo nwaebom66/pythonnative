@@ -14,5 +14,13 @@ def introduction(request: HttpRequest) -> HttpResponse:
     return render(request, "docs/introduction.html")
 
 
+def native_apis(request: HttpRequest) -> HttpResponse:
+    return render(request, "docs/native_apis.html")
+
+
 def tutorial(request: HttpRequest) -> HttpResponse:
     return render(request, "docs/tutorial.html")
+
+
+def views(request: HttpRequest) -> HttpResponse:
+    return render(request, "docs/views.html")
