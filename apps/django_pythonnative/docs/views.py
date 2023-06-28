@@ -12,3 +12,7 @@ def install(request: HttpRequest) -> HttpResponse:
 
 def introduction(request: HttpRequest) -> HttpResponse:
     return render(request, "docs/introduction.html")
+
+
+def tutorial(request: HttpRequest) -> HttpResponse:
+    return render(request, "docs/tutorial.html")
