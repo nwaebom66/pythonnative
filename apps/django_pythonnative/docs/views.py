@@ -4,3 +4,11 @@ from django.shortcuts import render
 
 def index(request: HttpRequest) -> HttpResponse:
     return render(request, "docs/index.html")
+
+
+def install(request: HttpRequest) -> HttpResponse:
+    return render(request, "docs/install.html")
+
+
+def introduction(request: HttpRequest) -> HttpResponse:
+    return render(request, "docs/introduction.html")
