@@ -4,5 +4,41 @@
   <link rel="stylesheet" href="{% static 'docs/style.css' %}">
 {% endblock %}
 {% block content %}
-  <p>Views docs!</p>
+  <table>
+    <thead>
+      <tr>
+        <th>PythonNative Class</th>
+        <th>Android Class</th>
+        <th>iOS Class</th>
+        <th>Implemented</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Button</td>
+        <td>android.widget.Button</td>
+        <td>UIButton</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Label</td>
+        <td>android.widget.TextView</td>
+        <td>UILabel</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>LinearLayout</td>
+        <td>android.widget.LinearLayout</td>
+        <td>UIStackView</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>Screen</td>
+        <td>android.app.Activity</td>
+        <td>UIViewController</td>
+        <td>Yes</td>
+      </tr>
+      <!-- Add more rows as necessary for additional views -->
+    </tbody>
+  </table>
 {% endblock %}
