@@ -4,5 +4,89 @@
   <link rel="stylesheet" href="{% static 'docs/style.css' %}">
 {% endblock %}
 {% block content %}
-  <p>Native API docs!</p>
+  <div class="px-3 py-3">
+    <div class="pb-3">
+      <h1>Native APIs</h1>
+      <div class="card">
+        <div class="card-body">
+          <p>These are the native APIs that PythonNative can access.</p>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>PythonNative Class</th>
+                <th>Android Class</th>
+                <th>iOS Class</th>
+                <th>Implemented</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Accelerometer</td>
+                <td><a href="https://developer.android.com/reference/android/hardware/SensorManager">android.hardware.SensorManager</a></td>
+                <td><a href="https://developer.apple.com/documentation/coremotion/cmmotionmanager">CMMotionManager</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>BatteryInfo</td>
+                <td><a href="https://developer.android.com/reference/android/os/BatteryManager">android.os.BatteryManager</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uidevice/1620052-batterylevel">UIDevice</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Camera</td>
+                <td><a href="https://developer.android.com/reference/android/hardware/Camera">android.hardware.Camera</a></td>
+                <td><a href="https://developer.apple.com/documentation/avfoundation/avcapturedevice">AVCaptureDevice</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Clipboard</td>
+                <td><a href="https://developer.android.com/reference/android/content/ClipboardManager">android.content.ClipboardManager</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uipasteboard">UIPasteboard</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>DeviceInfo</td>
+                <td><a href="https://developer.android.com/reference/android/os/Build">android.os.Build</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uidevice">UIDevice</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Filesystem</td>
+                <td><a href="https://developer.android.com/reference/java/nio/file/Files">java.nio.file.Files</a></td>
+                <td><a href="https://developer.apple.com/documentation/foundation/nsfilemanager">NSFileManager</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Geolocation</td>
+                <td><a href="https://developer.android.com/reference/android/location/LocationManager">android.location.LocationManager</a></td>
+                <td><a href="https://developer.apple.com/documentation/corelocation/cllocationmanager">CLLocationManager</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>NetworkInfo</td>
+                <td><a href="https://developer.android.com/reference/android/net/ConnectivityManager">android.net.ConnectivityManager</a></td>
+                <td><a href="https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html">Reachability</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Notifications</td>
+                <td><a href="https://developer.android.com/reference/android/app/NotificationManager">android.app.NotificationManager</a></td>
+                <td><a href="https://developer.apple.com/documentation/usernotifications/unusernotificationcenter">UNUserNotificationCenter</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Vibration</td>
+                <td><a href="https://developer.android.com/reference/android/os/Vibrator">android.os.Vibrator</a></td>
+                <td><a href="https://developer.apple.com/documentation/audiotoolbox/1405248-systemsoundid">AudioServicesPlaySystemSound</a></td>
+                <td>No</td>
+              </tr>
+              <!-- Add more rows as necessary for additional APIs -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

@@ -5,14 +5,24 @@
   <link rel="stylesheet" href="{% static 'docs/style.css' %}">
 {% endblock %}
 {% block content %}
-  <h1>PythonNative at a glance</h1>
-  <p>PythonNative is a cross-platform Python tool kit for Android and iOS. It
-    allows you to create native UI elements such as buttons and labels in a
-    Pythonic way, regardless of whether you're running on iOS or Android.</p>
-  <h2>Create your app</h2>
-  <pre><code class="language-bash">pip install pythonnative</code></pre>
-  <pre><code class="language-bash">pn init my_app</code></pre>
-  <pre><code class="language-plaintext">.
+  <div class="px-3 py-3">
+    <div class="pb-3">
+      <h1>PythonNative at a glance</h1>
+      <div class="card">
+        <div class="card-body">
+          PythonNative is a cross-platform Python tool kit for Android and iOS. It
+          allows you to create native UI elements such as buttons and labels in a
+          Pythonic way, regardless of whether you're running on iOS or Android.
+        </div>
+      </div>
+    </div>
+    <div class="pb-3">
+      <h2>Create your app</h2>
+      <div class="card">
+        <div class="card-body">
+          <pre><code class="language-bash">pip install pythonnative</code></pre>
+          <pre><code class="language-bash">pn init my_app</code></pre>
+          <pre><code class="language-plaintext">.
 ├── README.md
 ├── app
 │   ├── __init__.py
@@ -21,9 +31,15 @@
 ├── pythonnative.json
 ├── requirements.txt
 └── tests</code></pre>
-  <h2>Write your views</h2>
-  <p>Everything in PythonNative is a view.</p>
-  <pre><code class="language-python">import pythonnative as pn
+        </div>
+      </div>
+    </div>
+    <div class="pb-3">
+      <h2>Write your views</h2>
+      <div class="card">
+        <div class="card-body">
+          <p>Everything in PythonNative is a view.</p>
+          <pre><code class="language-python">import pythonnative as pn
 
 
 def main(context):
@@ -37,6 +53,10 @@ def main(context):
         layout.add_view(button)
 
     return layout.native_instance</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
 {% block js %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>

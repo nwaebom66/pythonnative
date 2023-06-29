@@ -4,126 +4,158 @@
   <link rel="stylesheet" href="{% static 'docs/style.css' %}">
 {% endblock %}
 {% block content %}
-  <h1>Views</h1>
-  <p>Everything in PythonNative is a view.</p>
-  <h2>Screens</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>PythonNative Class</th>
-      <th>Android Class</th>
-      <th>iOS Class</th>
-      <th>Implemented</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>BottomNavigationView</td>
-      <td><a href="https://developer.android.com/reference/com/google/android/material/bottomnavigation/BottomNavigationView">com.google.android.material.bottomnavigation.BottomNavigationView</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uitabbarcontroller">UITabBarController</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Screen</td>
-      <td><a href="https://developer.android.com/reference/android/app/Activity">android.app.Activity</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller">UIViewController</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>TopNavigationView</td>
-      <td><a href="https://developer.android.com/reference/com/google/android/material/appbar/MaterialToolbar">com.google.android.material.appbar.MaterialToolbar</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uinavigationcontroller">UINavigationController</a></td>
-      <td>No</td>
-    </tr>
-    <!-- Add more rows as necessary for additional views -->
-    </tbody>
-  </table>
-  <h2>Layouts</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>PythonNative Class</th>
-      <th>Android Class</th>
-      <th>iOS Class</th>
-      <th>Implemented</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>CollectionView</td>
-      <td><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView">androidx.recyclerview.widget.RecyclerView</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uicollectionview">UICollectionView</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>LinearLayout</td>
-      <td><a href="https://developer.android.com/reference/android/widget/LinearLayout">android.widget.LinearLayout</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uistackview">UIStackView</a></td>
-      <td>Yes</td>
-    </tr>
-    <!-- Add more rows as necessary for additional views -->
-    </tbody>
-  </table>
-  <h2>Views</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>PythonNative Class</th>
-      <th>Android Class</th>
-      <th>iOS Class</th>
-      <th>Implemented</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>Button</td>
-      <td><a href="https://developer.android.com/reference/android/widget/Button">android.widget.Button</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uibutton">UIButton</a></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>DatePicker</td>
-      <td><a href="https://developer.android.com/reference/android/widget/DatePicker">android.widget.DatePicker</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uidatepicker">UIDatePicker</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>ImageView</td>
-      <td><a href="https://developer.android.com/reference/android/widget/ImageView">android.widget.ImageView</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uiimageview">UIImageView</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>Label</td>
-      <td><a href="https://developer.android.com/reference/android/widget/TextView">android.widget.TextView</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uilabel">UILabel</a></td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <td>Switch</td>
-      <td><a href="https://developer.android.com/reference/android/widget/Switch">android.widget.Switch</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uiswitch">UISwitch</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>TextField</td>
-      <td><a href="https://developer.android.com/reference/android/widget/EditText">android.widget.EditText</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uitextfield">UITextField</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>TextView</td>
-      <td><a href="https://developer.android.com/reference/android/widget/EditText">android.widget.EditText</a></td>
-      <td><a href="https://developer.apple.com/documentation/uikit/uitextview">UITextView</a></td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <td>WebView</td>
-      <td><a href="https://developer.android.com/reference/android/webkit/WebView">android.webkit.WebView</a></td>
-      <td><a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebView</a></td>
-      <td>No</td>
-    </tr>
-    <!-- Add more rows as necessary for additional views -->
-    </tbody>
-  </table>
+  <div class="px-3 py-3">
+    <div class="pb-3">
+      <h1>Views</h1>
+      <div class="card">
+        <div class="card-body">
+          Everything in PythonNative is a view.
+        </div>
+      </div>
+    </div>
+    <div class="pb-3">
+      <h2>Screens</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>PythonNative Class</th>
+                <th>Android Class</th>
+                <th>iOS Class</th>
+                <th>Implemented</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>BottomNavigationView</td>
+                <td><a href="https://developer.android.com/reference/com/google/android/material/bottomnavigation/BottomNavigationView">com.google.android.material.bottomnavigation.BottomNavigationView</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uitabbarcontroller">UITabBarController</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Screen</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity">android.app.Activity</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller">UIViewController</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>TopNavigationView</td>
+                <td><a href="https://developer.android.com/reference/com/google/android/material/appbar/MaterialToolbar">com.google.android.material.appbar.MaterialToolbar</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uinavigationcontroller">UINavigationController</a></td>
+                <td>No</td>
+              </tr>
+              <!-- Add more rows as necessary for additional views -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-3">
+      <h2>Layouts</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>PythonNative Class</th>
+                <th>Android Class</th>
+                <th>iOS Class</th>
+                <th>Implemented</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>CollectionView</td>
+                <td><a href="https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView">androidx.recyclerview.widget.RecyclerView</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uicollectionview">UICollectionView</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>LinearLayout</td>
+                <td><a href="https://developer.android.com/reference/android/widget/LinearLayout">android.widget.LinearLayout</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uistackview">UIStackView</a></td>
+                <td>Yes</td>
+              </tr>
+              <!-- Add more rows as necessary for additional views -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pb-3">
+      <h2>Views</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>PythonNative Class</th>
+                <th>Android Class</th>
+                <th>iOS Class</th>
+                <th>Implemented</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Button</td>
+                <td><a href="https://developer.android.com/reference/android/widget/Button">android.widget.Button</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uibutton">UIButton</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>DatePicker</td>
+                <td><a href="https://developer.android.com/reference/android/widget/DatePicker">android.widget.DatePicker</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uidatepicker">UIDatePicker</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>ImageView</td>
+                <td><a href="https://developer.android.com/reference/android/widget/ImageView">android.widget.ImageView</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiimageview">UIImageView</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Label</td>
+                <td><a href="https://developer.android.com/reference/android/widget/TextView">android.widget.TextView</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uilabel">UILabel</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Switch</td>
+                <td><a href="https://developer.android.com/reference/android/widget/Switch">android.widget.Switch</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiswitch">UISwitch</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>TextField</td>
+                <td><a href="https://developer.android.com/reference/android/widget/EditText">android.widget.EditText</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uitextfield">UITextField</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>TextView</td>
+                <td><a href="https://developer.android.com/reference/android/widget/EditText">android.widget.EditText</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uitextview">UITextView</a></td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>WebView</td>
+                <td><a href="https://developer.android.com/reference/android/webkit/WebView">android.webkit.WebView</a></td>
+                <td><a href="https://developer.apple.com/documentation/webkit/wkwebview">WKWebView</a></td>
+                <td>Yes</td>
+              </tr>
+              <!-- Add more rows as necessary for additional views -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
