@@ -235,5 +235,76 @@
         </div>
       </div>
     </div>
+    <div class="pb-3">
+      <h2>Lifecycle Events</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>PythonNative Lifecycle Event</th>
+                <th>Android Activity Lifecycle Event</th>
+                <th>iOS UIViewController Lifecycle Event</th>
+                <th>Implemented</th>
+              </tr>
+              <tr>
+                <td>on_create</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onCreate(android.os.Bundle)">onCreate()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621495-viewdidload">viewDidLoad()</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_start</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onStart()">onStart()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621510-viewwillappear">viewWillAppear()</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_resume</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onResume()">onResume()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear">viewDidAppear()</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_pause</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onPause()">onPause()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear">viewWillDisappear()</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_stop</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onStop()">onStop()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear">viewDidDisappear()</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_destroy</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onDestroy()">onDestroy()</a></td>
+                <td>deinit (no direct equivalent)</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_restart</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onRestart()">onRestart()</a></td>
+                <td>N/A (no direct equivalent)</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_save_instance_state</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onSaveInstanceState(android.os.Bundle)">onSaveInstanceState()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621461-encoderestorablestate">encodeRestorableState(with:)</a></td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>on_restore_instance_state</td>
+                <td><a href="https://developer.android.com/reference/android/app/Activity#onRestoreInstanceState(android.os.Bundle)">onRestoreInstanceState()</a></td>
+                <td><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621429-decoderestorablestate">decodeRestorableState(with:)</a></td>
+                <td>No</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}
