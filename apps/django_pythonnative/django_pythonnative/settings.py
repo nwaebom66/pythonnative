@@ -147,7 +147,21 @@ USE_TZ = True
 GS_BUCKET_NAME = env("GS_BUCKET_NAME")
 DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
-GS_DEFAULT_ACL = "publicRead"
+
+# Cannot insert legacy ACL for an object when uniform bucket-level access is
+# enabled. Read more at
+# https://cloud.google.com/storage/docs/uniform-bucket-level-access
+# GS_DEFAULT_ACL = "publicRead"
+
+# The error you are facing occurs when your Google Cloud Storage bucket has
+# "Uniform bucket-level access" enabled and the Django storages backend is
+# attempting to set object-level permissions (legacy ACL), which are not
+# supported when "Uniform bucket-level access" is on. One potential solution is
+# to modify the storage settings in your Django application to not set public
+# read ACLs during the upload process. The 'django-storages' library's Google
+# Cloud Storage backend (GCloud) has a setting for this, GS_BLOB_CHUNK_SIZE.
+GS_BLOB_CHUNK_SIZE = 1024 * 1024  # or any other chunk size you want
+GS_DEFAULT_ACL = None
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
