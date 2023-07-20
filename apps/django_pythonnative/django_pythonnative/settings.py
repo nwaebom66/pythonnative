@@ -48,12 +48,16 @@ DEBUG = env("DEBUG")
 
 CLOUDRUN_SERVICE_URL = env("CLOUDRUN_SERVICE_URL", default=None)
 if CLOUDRUN_SERVICE_URL:
-    ALLOWED_HOSTS = [urlparse(CLOUDRUN_SERVICE_URL).netloc]
+    ALLOWED_HOSTS = [
+        urlparse(CLOUDRUN_SERVICE_URL).netloc,
+        "pythonnative.com",
+        "www.pythonnative.com",
+    ]
     CSRF_TRUSTED_ORIGINS = [CLOUDRUN_SERVICE_URL]
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ["pythonnative.com", "www.pythonnative.com"]
 
 
 # Application definition
