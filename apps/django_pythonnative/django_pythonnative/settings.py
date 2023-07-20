@@ -163,6 +163,35 @@ STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
 GS_BLOB_CHUNK_SIZE = 1024 * 1024  # or any other chunk size you want
 GS_DEFAULT_ACL = None
 
+# The error message you're seeing, "you need a private key to sign credentials",
+# is due to the fact that Google Cloud's client libraries are trying to create a
+# signed URL using the default application credentials. However, the default
+# application credentials (typically provided by a service account when running
+# on Google Cloud, or via the GOOGLE_APPLICATION_CREDENTIALS environment
+# variable pointing to a service account key file when running locally) do not
+# include a private key.
+#
+# This is usually a problem when using Google Cloud Storage (GCS) with Django,
+# and asking Django to serve a static file that's stored in GCS. The
+# django-storages library will try to create a signed URL for that file, which
+# requires a private key.
+#
+# There are few possible solutions for this:
+#
+# 1. Use a service account with a key file: When running the application
+# locally, you can create a service account and download its key file. Then, set
+# the GOOGLE_APPLICATION_CREDENTIALS environment variable to the path of that
+# key file. This key file will contain a private key that can be used to sign
+# URLs.
+#
+# 2. Remove URL signing: If all the static files are public (which seems to be
+# your case), you can disable the URL signing, so that it just uses the plain
+# URL of the object in GCS. Add this to your settings.py:
+# GS_QUERYSTRING_AUTH = False
+# This tells django-storages to not append the auth token to the URL when
+# accessing a Blob.
+GS_QUERYSTRING_AUTH = False
+
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
