@@ -20,7 +20,7 @@ PLATFORM = "managed"
 
 SERVICE = f"polls-{SUFFIX}"
 
-# Retreieve Cloud SQL test config
+# Retrieve Cloud SQL test config
 POSTGRES_INSTANCE = os.environ.get("POSTGRES_INSTANCE", None)
 if not POSTGRES_INSTANCE:
     raise Exception("'POSTGRES_INSTANCE' env var not found")
@@ -83,7 +83,6 @@ def run_shell_cmd(args: list) -> subprocess.CompletedProcess:
 
 @pytest.fixture
 def deployed_service() -> str:
-
     substitutions = [
         f"_SERVICE={SERVICE},"
         f"_PLATFORM={PLATFORM},"
@@ -164,7 +163,7 @@ def service_url_auth_token(deployed_service: str) -> Iterator[tuple[str, str]]:
                 "--region",
                 REGION,
                 "--format",
-                "\"value(status.url)\"",
+                '"value(status.url)"',
                 "--project",
                 GOOGLE_CLOUD_PROJECT,
             ]

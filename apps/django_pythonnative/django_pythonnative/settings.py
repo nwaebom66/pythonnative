@@ -187,9 +187,8 @@ GS_DEFAULT_ACL = None
 # 2. Remove URL signing: If all the static files are public (which seems to be
 # your case), you can disable the URL signing, so that it just uses the plain
 # URL of the object in GCS. Add this to your settings.py:
-# GS_QUERYSTRING_AUTH = False
-# This tells django-storages to not append the auth token to the URL when
-# accessing a Blob.
+# `GS_QUERYSTRING_AUTH = False`. This tells django-storages to not append the
+# auth token to the URL when accessing a Blob.
 GS_QUERYSTRING_AUTH = False
 
 STATIC_URL = "static/"
