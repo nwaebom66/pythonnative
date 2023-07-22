@@ -74,6 +74,9 @@ class ViewController: UIViewController {
         let createWidgetsModule = Python.import("create_widgets")
         self.view.tag = 100
         createWidgetsModule.create_widgets(self.view.tag)
+        
+        let secondViewController = SecondViewController()
+        self.navigationController?.pushViewController(secondViewController, animated: true)
     }
 
 }

@@ -23,6 +23,7 @@
 		14BBE9932A38D3ED0030EB3E /* create_widgets.py in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9922A38D3ED0030EB3E /* create_widgets.py */; };
 		14BBE9952A38E3B20030EB3E /* rubicon in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9942A38E3B20030EB3E /* rubicon */; };
 		14BBE9972A38E5E10030EB3E /* rubicon_objc.egg-info in Resources */ = {isa = PBXBuildFile; fileRef = 14BBE9962A38E5E10030EB3E /* rubicon_objc.egg-info */; };
+		14C1AF192A6BA8F700B506CB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C1AF182A6BA8F700B506CB /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		14BBE9922A38D3ED0030EB3E /* create_widgets.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = create_widgets.py; sourceTree = "<group>"; };
 		14BBE9942A38E3B20030EB3E /* rubicon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = rubicon; sourceTree = "<group>"; };
 		14BBE9962A38E5E10030EB3E /* rubicon_objc.egg-info */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "rubicon_objc.egg-info"; sourceTree = "<group>"; };
+		14C1AF182A6BA8F700B506CB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				14BBDC662A382DE70030EB3E /* Assets.xcassets */,
 				14BBDC682A382DE70030EB3E /* LaunchScreen.storyboard */,
 				14BBDC6B2A382DE70030EB3E /* Info.plist */,
+				14C1AF182A6BA8F700B506CB /* SecondViewController.swift */,
 			);
 			path = ios_pythonnative;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C1AF192A6BA8F700B506CB /* SecondViewController.swift in Sources */,
 				14BBDC622A382DE50030EB3E /* ViewController.swift in Sources */,
 				14BBDC5E2A382DE50030EB3E /* AppDelegate.swift in Sources */,
 				14BBDC602A382DE50030EB3E /* SceneDelegate.swift in Sources */,
